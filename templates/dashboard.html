@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home space</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-vLTaPwEWfDvJnIwYDeJk+p8BpW9VCvnmqUD3qurxuSL7JrFdmQvMJkV+Czrn1/JLxW82lTBD0TH0jTUKbFL2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    
+
+
+</head>
+<body>
+    
+<body>
+<center>
+        <h3 style="color: blue;">Welcome to Your Home Space</h3>
+        <div class="logout">
+            <a href="/logout">
+                <button><img src="{{ url_for('static', filename='images/logout.png') }}" alt="Nom de l'image"><i class="fa fa-search"></i></button>
+            </a>
+        </div>
+        <div class="Button">
+            <button><a href="/files">Files</a></button>
+            <button><a href="/Dirs">Dirs</a></button>
+            <button><a href="/Space">Space</a></button>
+        </div>
+        <div class="section">
+            <div class="search">
+                <form action="/search" method="GET">
+                    <input type="text" name="q" placeholder="Rechercher...">
+                    <button type="submit"><img src="{{ url_for('static', filename='images/search.png') }}" alt="Nom de l'image"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            
+            <div class="droit">
+                <form action="/download" method="GET">
+                    <button type="submit"><img src="{{ url_for('static', filename='icons/telechargement.png') }}" alt="Nom de l'image"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            
+        </div>
+        
+    <div>
+        <table class="panel">
+        
+        <tr>
+            <th>Directory Name</th>
+            <th>Date de Modefication</th>
+            <th>Taille</th>
+        </tr >
+        {% for directory in directories %}
+        <tr class="directory-row">
+            <td><img src="{{ url_for('static', filename='images/directory.png') }}" alt="Nom de l'image"><a href="{{ url_for('browse_directory', directory=directory) }}">{{ directory.name }}</a></td>
+            <td>{{ directory.date }}</td>
+            <td>{{ directory.size}}</td>
+        </tr>
+        {% endfor %}
+        </table>
+    </div>
+    {{logout}}
+</center>   
+
+</body>
+</body>
+</html>

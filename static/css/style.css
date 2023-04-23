@@ -1,0 +1,151 @@
+.panel {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  height: auto;
+  width: 800px;
+  
+}
+
+.directory-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/home/ouail/WebHomeSpace/static/images/images.png");
+  background-size: contain;
+  margin-right: 10px;
+}
+
+.directory-row:nth-child(even) {
+  background-color: #f2f2f2;
+}
+img {
+  height: 20px;
+  width: 20px;
+  
+}
+
+.Button {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 100px;
+}
+
+.Button button {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.Button button:nth-child(1) {
+  background-color: pink;
+}
+
+.Button button:nth-child(2) {
+  background-color: blue;
+}
+
+.Button button:nth-child(3) {
+  background-color: green;
+}
+.search {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 50px;
+  float:left;
+  margin-left: 370px;
+  margin-bottom: 30px;
+}
+
+.search form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.search input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  outline: none;
+  color: #333;
+}
+
+.search button[type="submit"] {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.search button[type="submit"] i {
+  font-size: 20px;
+  color: #333;
+}
+
+.search input[type="text"]::placeholder {
+  color: #999;
+  opacity: 1; /* Firefox */
+}
+
+.search input[type="text"]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #999;
+}
+
+.search input[type="text"]::-ms-input-placeholder { /* Microsoft Edge */
+  color: #999;
+}
+.droit{
+  margin-right: 370px;
+  float: right;
+}
+.section {
+  margin-top: 30px;
+  margin-bottom: 125px;
+}
+.droit button[type="submit"] {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  width: 50px; /* ajuster la largeur selon vos besoins */
+  height: 50px; /* ajuster la hauteur selon vos besoins */
+}
+
+.droit button[type="submit"] img {
+  width: 100%; /* adapter l'image à la taille du bouton */
+  height: 100%; /* adapter l'image à la taille du bouton */
+}
+
+.logout button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2em;
+  padding: 0.5em 1em;
+  float: right;
+  margin-right: 370px;
+  transition: all 0.2s;
+
+}
+
+.logout button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.logout button img {
+  width: 30px;
+  height: 30px;
+}

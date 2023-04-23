@@ -1,0 +1,21 @@
+<html>
+
+<center>
+
+<h3 style="color: blue;">Authentication</h3>
+    <form  action="/login" method="post">
+
+        <label>name <br>
+        <input style="border: 2; border-style: groove; border-color: blue;" type="text" name="nom"/><br>
+        <label>password</label><br>
+        <input style="border: 2; border-style: groove; border-color: blue;" type="password" name="password"/>
+        <br><br>
+        <input style="color: green" type="submit" value="Authenticate"/>
+
+    </form>
+    <p style="color: red;">{{error_user}}</p>
+
+
+</center>
+
+</html>
